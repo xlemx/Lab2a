@@ -7,7 +7,7 @@ public class TestRegEx {
         TestFileRead testFileRead = new TestFileRead();
         String exItem = TestFileRead.contents;
 
-        Pattern pat =Pattern.compile("<title<!\\[CDATA\\[(.*)\\]\\]");
+        Pattern pat =Pattern.compile("<title><!\\[CDATA\\[(.*)\\]\\]");
         Matcher m= pat.matcher(exItem);
         if (m.find())
             System.out.println("Znaleziono tytuł: " +m.group(1));
